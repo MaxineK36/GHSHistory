@@ -37,7 +37,7 @@ $(".iconImgDiv").hover(function(){
 });
 
 function assignClasses(){
-	var URL = "2017/academics"
+	var URL = "Photos/2017/academics"
 	alert(URL)
 	document.getElementById("iconImg1").innerHTML = "<img src="+URL+">"
 	//assign classes to iconTexts
