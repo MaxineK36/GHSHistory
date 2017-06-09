@@ -1,4 +1,4 @@
-console.log("12:34 version")
+console.log("12:36 version")
 
 
 hideCategories();
