@@ -1,5 +1,5 @@
 hideCategories();
-
+console.log("10:36 version")
 
 var windowHeight = window.innerHeight;
 var windowWidth = window.innerWidth;
@@ -35,6 +35,8 @@ $(".iconImgDiv").hover(function(){
 });
 
 function assignClasses(){
+	var URL = storageRef.child('images/stars.jpg').getDownloadURL()
+	alert(URL)
 	//assign classes to iconTexts
 	for (var i = 0; i < iconTexts.length; i++) {
 		$(iconTexts[i]).addClass("w3-display-hover w3-display-middle w3-black")
@@ -69,7 +71,7 @@ function assignClasses(){
 }
 
 function testFunction(){
-	alert('hi')
+	// alert('hi')
 }
 function nextEra(){
 	console.log('next')
