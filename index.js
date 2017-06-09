@@ -1,4 +1,4 @@
-console.log("10:46 version")
+console.log("10:48 version")
 
 
 // Create a reference with an initial file path and name
@@ -49,7 +49,7 @@ $(".iconImgDiv").hover(function(){
 });
 
 function assignClasses(){
-	var URL = storageRef.child('2017/academics.jpg').getDownloadURL()
+	var URL = storage.ref('2017/academics.jpg').getDownloadURL()
 	alert(URL)
 	document.getElementById("iconImg1").innerHTML = "<img src="+URL+">"
 	//assign classes to iconTexts
