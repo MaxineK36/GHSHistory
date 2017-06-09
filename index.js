@@ -5,13 +5,14 @@ var storage = firebase.storage();
 var pathReference = storage.ref('images/stars.jpg');
 
 // Create a reference from a Google Cloud Storage URI
+console.log("10:40 version")
+
 var gsReference = storage.refFromURL('gs://bucket/images/stars.jpg')
 
 // Create a reference from an HTTPS URL
 // Note that in the URL, characters are URL escaped!
 var httpsReference = storage.refFromURL('https://firebasestorage.googleapis.com/b/bucket/o/images%20stars.jpg');
 hideCategories();
-console.log("10:38 version")
 
 var windowHeight = window.innerHeight;
 var windowWidth = window.innerWidth;
@@ -49,6 +50,7 @@ $(".iconImgDiv").hover(function(){
 function assignClasses(){
 	var URL = storageRef.child('images/stars.jpg').getDownloadURL()
 	alert(URL)
+	document.getElementById("iconImg1").innerHTML = "<img src="+URL+">"
 	//assign classes to iconTexts
 	for (var i = 0; i < iconTexts.length; i++) {
 		$(iconTexts[i]).addClass("w3-display-hover w3-display-middle w3-black")
