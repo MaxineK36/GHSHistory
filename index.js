@@ -1,17 +1,4 @@
-console.log("10:51 version")
-
-
-// Create a reference with an initial file path and name
-var storage = firebase.storage();
-
-// Create a root reference
-var storageRef = firebase.storage().ref();
-
-// Create a reference to 'mountains.jpg'
-var academicsRef = storageRef.child('academics.jpg');
-
-// Create a reference to 'images/mountains.jpg'
-var mountainImagesRef = storageRef.child('images/mountains.jpg');
+console.log("12:34 version")
 
 
 hideCategories();
@@ -50,7 +37,7 @@ $(".iconImgDiv").hover(function(){
 });
 
 function assignClasses(){
-	var URL = academicsRef.getDownloadURL()
+	var URL = "2017/academics"
 	alert(URL)
 	document.getElementById("iconImg1").innerHTML = "<img src="+URL+">"
 	//assign classes to iconTexts
