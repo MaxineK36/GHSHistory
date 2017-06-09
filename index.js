@@ -1,17 +1,18 @@
-console.log("10:48 version")
+console.log("10:51 version")
 
 
 // Create a reference with an initial file path and name
 var storage = firebase.storage();
-// var pathReference = storage.ref('images/stars.jpg');
 
-// // Create a reference from a Google Cloud Storage URI
+// Create a root reference
+var storageRef = firebase.storage().ref();
 
-// var gsReference = storage.refFromURL('gs://bucket/images/stars.jpg')
+// Create a reference to 'mountains.jpg'
+var academicsRef = storageRef.child('academics.jpg');
 
-// // Create a reference from an HTTPS URL
-// // Note that in the URL, characters are URL escaped!
-// var httpsReference = storage.refFromURL('https://firebasestorage.googleapis.com/b/bucket/o/images%20stars.jpg');
+// Create a reference to 'images/mountains.jpg'
+var mountainImagesRef = storageRef.child('images/mountains.jpg');
+
 
 hideCategories();
 
@@ -49,7 +50,7 @@ $(".iconImgDiv").hover(function(){
 });
 
 function assignClasses(){
-	var URL = storage.ref('2017/academics.jpg').getDownloadURL()
+	var URL = academicsRef.getDownloadURL()
 	alert(URL)
 	document.getElementById("iconImg1").innerHTML = "<img src="+URL+">"
 	//assign classes to iconTexts
