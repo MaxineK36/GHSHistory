@@ -59,7 +59,39 @@
 	overflow: hidden;
 }
 
+.categoryTitle{
+	background-color: red;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	
+	text-align: center;
+	border: solid;
+	border-top: none;
+}
 
+.rightArrow{
+	margin-right: 4px;
+}
 
+.leftArrow{
+	margin-left: 4px;
+}
 
+.arrow{
+/*	background-color: white;*/
+	text-decoration: bold;
+}
+
+.categoryTotal{
+	height: 520px;
+	background-color: yellow;
+	overflow: scroll;
+}
+
+.categoryBody{
+	background-color: green;
+	height: 480px;
+}
 

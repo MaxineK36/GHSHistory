@@ -16,15 +16,12 @@
   <!--  Jquery, bootstrap etc. JS -->  
   <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript">
    </script>
-
-  
 </head>
 
 <body>
 
 <div class="fullWidth">
-<!--   <div class="w3-display">
- -->    
+  <!--   <div class="w3-display"> -->    
   <div class="w3-row" id="headerRow">
       <div class="w3-left" id="title">
         <h1> Title </h1>
@@ -84,16 +81,9 @@
          <p class"w3-cell-middle"> Temporary stuff yada yada </p>
         </div>
       <div class="w3-row" id="otherSection">
-          <div class="w3-row" id="row1">
-            <div class="categoryTitle" id="academics" onclick="closeThing()"> academics </div>
-            <div class="categoryTitle" id="extracurriculars" onclick="closeThing()"> extracurriculars </div>
-            <div class="categoryTitle" id="location" onclick="closeThing()"> location </div>
-            <div class="categoryTitle" id="sports" onclick="closeThing()"> sports </div>
-            <div class="categoryTitle" id="studentlife" onclick="closeThing()"> studentlife </div>
-            <div class="categoryTitle" id="other" onclick="closeThing()"> other </div>
-            
+          <div class="w3-row" id="row1">   
             <div class="w3-third iconImgDiv" onclick="openThing('academics');">
-              <img src="academics.jpg" class="iconImg" id="iconImg1">
+              <img src="2017/academics.jpg" class="iconImg" id="iconImg1">
                 <button type="button" id="iconButton" class="iconText w3-button w3-black">Academics</button>
               </div>
             <div class="w3-third iconImgDiv" onclick="openThing('extracurriculars');">
@@ -102,10 +92,8 @@
             </div>
             <div class="w3-third iconImgDiv" onclick="openThing('location');">
               <img src="location.jpg" class="iconImg" id="iconImg3">
-              <button type="button" id="iconButton" class="iconText w3-button w3-black">
-
-      <!--       change  this  name -->                
-                Location </button>
+              <button type="button" id="iconButton" class="iconText w3-button w3-black"> Location </button>
+               <!-- change  this  name -->
             </div>
            </div>
           <div class="w3-row" id="row2">
@@ -121,14 +109,47 @@
               <img src="other.jpg" class="iconImg" id="iconImg6">
               <button type="button" id="iconButton" class="iconText w3-button w3-black">Other</button>
             </div>
+
+
+
+            <div class="categoryTotal" id="academics">
+              <div class="categoryTitle" onclick="closeThing()"> academics </div>
+            </div>
+            <div class="categoryTotal" id="extracurriculars">
+              <div class="categoryTitle" onclick="closeThing()"> extracurriculars </div>
+            </div>
+            <div class="categoryTotal" id="location">
+              <div class="categoryTitle" onclick="closeThing()"> location </div>
+            </div>
+            <div class="categoryTotal" id="sports">
+              <div class="categoryTitle" onclick="closeThing()"> sports </div>
+            </div>
+            <div class="categoryTotal" id="studentlife">
+              <div class="categoryTitle" onclick="closeThing()"> studentlife </div>
+            </div>
+            <div class="categoryTotal" id="other">
+              <div class="categoryTitle" onclick="closeThing()"> other </div>
+            </div>
            </div>
         </div>
     </div>
   </div>
 
 </body>
-
-  <script src = "index.js"> </script> 
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAdTe2vh3OUtmFQ0HQiSAj69jjPjEpEv60",
+    authDomain: "ghs-history-website.firebaseapp.com",
+    databaseURL: "https://ghs-history-website.firebaseio.com",
+    projectId: "ghs-history-website",
+    storageBucket: "ghs-history-website.appspot.com",
+    messagingSenderId: "837816331094"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src = "index.js"> </script> 
 
 </html>
 
